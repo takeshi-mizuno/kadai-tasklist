@@ -6,7 +6,6 @@ class TasksController < ApplicationController
 
   
   def index
-      @task = current_user.tasks.build  # form_with 用
       @tasks = current_user.tasks.order(id: :desc)
   end
 
